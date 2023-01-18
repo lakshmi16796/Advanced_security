@@ -16,7 +16,7 @@ pipeline {
 	         echo "${env.choices}"
 		 echo "This is Dockers"
 		 return [
-			 env.choices:deselected]
+			 "env.choices:deselected"]
 			
 		 echo "${env.choices}"
 		}
