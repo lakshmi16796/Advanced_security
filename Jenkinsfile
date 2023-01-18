@@ -18,6 +18,7 @@ pipeline {
 		 return [
 			 "env.choices:deselected"]
 			
+		 echo "selected parameter is"	
 		 echo "${env.choices}"
 		}
 	    	} 
