@@ -10,15 +10,14 @@ pipeline {
 	script {
 		
                  echo "selected parameter is"	
-		 if(env.choices == "Docker")
+		 if(env.choices == "Docker" && "QT")
 		{
-			
+		 echo "Selected parameter is" 	
 	         echo "${env.choices}"
-		 echo "This is Dockers"
-		 env.choices:deselected
+		
+		
 			
-		 echo "selected parameter is"	
-		 echo "${env.choices}"
+		
 		}
 	    	} 
   }
