@@ -11,7 +11,7 @@ pipeline {
 		
                  echo "selected parameter is"
 		 echo "${env.choices}"
-		 if(env.choices == "Docker" && "QT")
+		 if(env.choices == "Docker,QT")
 		{
 		 echo "Selected parameter is" 	
 	         echo "${env.choices}"
