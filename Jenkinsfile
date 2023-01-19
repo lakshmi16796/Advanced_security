@@ -15,6 +15,7 @@ pipeline {
 		{
 		 echo "Selected parameter is" 	
 	         echo "${env.choices}"
+		 echo "$env.BUILD_URL"
 		
 		
 			
