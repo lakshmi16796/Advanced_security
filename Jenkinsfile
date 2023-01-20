@@ -16,6 +16,7 @@ pipeline {
 		{
 		 echo "Selected parameter is" 	
 	         echo "${env.choices}"
+		 start "http://localhost:8080/job/Mutual-Exclusion%20Feature/build?delay=0sec"
 		
 		 		
 		
