@@ -11,17 +11,18 @@ pipeline {
 		
                  echo "selected parameter is"
 		 echo "${env.choices}"
-		  def url = "http://localhost:8080/job/Mutual-Exclusion%20Feature/build?delay=0sec".toURL()
-		 if(env.choices == "Docker,QT")
-		{
-		 echo "Selected parameter is" 	
-	         echo "${env.choices}"
-		 start "http://localhost:8080/job/Mutual-Exclusion%20Feature/build?delay=0sec"
+		 //def url = "http://localhost:8080/job/Mutual-Exclusion%20Feature/build?delay=0sec".toURL()
 		
-		 		
+		 dir("/home/lakshmi/dell_pods/poky/build/conf")  
+		 {
+      	           sh '''#!/bin/bash
+		 
+		      xdg-open http://localhost:8080/job/Mutual-Exclusion%20Feature/build?delay=0sec
+		
+		 	'''	
 		
 			
-		
+		 }
 		}
 	    	} 
   }
