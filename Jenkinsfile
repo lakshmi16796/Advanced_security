@@ -17,7 +17,7 @@ pipeline {
       	        	sh '''#!/bin/bash
 			input=$(printenv choices)
 			input_adv=$(printenv adv_choices)
-			input+="$input_adv $(echo "\n")"
+			input+="$(echo " ") $input_adv "
 			echo "your input"
 			echo "$input"
 			
