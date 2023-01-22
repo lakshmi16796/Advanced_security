@@ -10,7 +10,7 @@ pipeline {
 	script {
 		
                  echo "selected parameter is"		      
-	         echo "${env.choices}"	
+	         echo "${env.choices, env.adv_choices}"	
 		 echo "${env.adv_choices}"
 		
 		 if(env.adv_choices == "Docker")
