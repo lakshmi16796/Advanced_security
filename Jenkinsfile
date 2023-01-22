@@ -33,11 +33,11 @@ pipeline {
 			n=$(grep -rin "#AD#" local.conf | awk '{print $2 }')
 			echo "Advanced pattern is"
 			#echo $n
-			x=$(echo $n | sed 's/ /,/g')
+			y=$(echo $n | sed 's/ /,/g')
 			#echo "x is"
-			echo $x
+			echo $y
 			> adv_properties
-			echo "adv_feature=$x" >> adv_properties
+			echo "adv_feature=$y" >> adv_properties
 			
 			array=()
 			IFS='+, ' read -ra array <<< $input
@@ -51,7 +51,7 @@ pipeline {
 			echo "Line number is"
 			echo "$n"
 		
-			lines=$(grep -rin $i local.conf | head -1 | awk '{print $1}' | | cut -d# -f 5)
+			lines=$(grep -rin $i local.conf | head -1 | awk '{print $1}' | cut -d# -f 5)
 			echo "Number of lines to edit is"
 			echo "$lines"
 		
