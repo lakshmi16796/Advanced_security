@@ -13,7 +13,7 @@ pipeline {
 	         echo "${env.choices}"	
 		 echo "${env.adv_choices}"
 		
-		 if($env.adv_choices != "")
+		 if($env.adv_choices == "Docker")
 		{
 			echo "Advanced feature selected"
 		}
