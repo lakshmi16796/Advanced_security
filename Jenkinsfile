@@ -15,7 +15,7 @@ pipeline {
 		dir("/home/lakshmi/dell_pods/poky/build/conf")  
 		  {
       	        	sh '''#!/bin/bash
-			input=$(printenv choices)
+			input=$(printenv choices,adv_choices)
 			echo "your input"
 			echo "$input"
 			
