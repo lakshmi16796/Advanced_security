@@ -16,17 +16,7 @@ pipeline {
 		 if(env.adv_choices == "Docker")
 		{
 			echo "Advanced feature selected"
-			def askpass = input(
-                        message: 'Please enter the password',
-                        parameters: [
-                            password(defaultValue: '',
-                                    description: '',
-                                    name: 'password')],
-                        submitterParameter: 'submitter')
-                    	env.MY_USER = askpass.submitter
-                    	env.MY_PASSWORD = askpass.password
-			echo "${env.MY_USER}"
-			echo "${env.MY_PASSWORD}"
+			input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
 		}
 	    
 		dir("/home/lakshmi/dell_pods/poky/build/conf")  
