@@ -10,12 +10,23 @@ pipeline {
 	script {
 		
                  echo "selected parameter is"		      
-	         echo "${env.choices, env.adv_choices}"	
+	         echo "${env.choices}"	
 		 echo "${env.adv_choices}"
 		
 		 if(env.adv_choices == "Docker")
 		{
 			echo "Advanced feature selected"
+			def askpass = input(
+                        message: 'Please enter the password',
+                        parameters: [
+                            password(defaultValue: '',
+                                    description: '',
+                                    name: 'password')],
+                        submitterParameter: 'submitter')
+                    	env.MY_USER = askpass.submitter
+                    	env.MY_PASSWORD = askpass.password
+			echo "${env.MY_USER}"
+			echo "${env.MY_PASSWORD}"
 		}
 	    
 		dir("/home/lakshmi/dell_pods/poky/build/conf")  
