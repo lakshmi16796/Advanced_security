@@ -21,7 +21,7 @@ pipeline {
 			
 			#Selecting common features and storing it into Properties file
 			n=$(grep -rin "####" local.conf | awk '{print $2 }')
-			echo "recognised pattern is"
+			echo "Common pattern is"
 			#echo $n
 			x=$(echo $n | sed 's/ /,/g')
 			#echo "x is"
@@ -31,7 +31,7 @@ pipeline {
 			
 			#Selecting Advanced features and storing it into adv_properties file
 			n=$(grep -rin "###" local.conf | awk '{print $2 }')
-			echo "recognised pattern is"
+			echo "Advanced pattern is"
 			#echo $n
 			x=$(echo $n | sed 's/ /,/g')
 			#echo "x is"
