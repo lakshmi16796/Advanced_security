@@ -10,7 +10,13 @@ pipeline {
 	script {
 		
                  echo "selected parameter is"		      
-	         echo "${env.choices}"	 
+	         echo "${env.choices}"	
+		 echo "${env.adv_choices}"
+		
+		 if($env.adv_choices != "")
+		{
+			echo "Advanced feature selected"
+		}
 	    
 		dir("/home/lakshmi/dell_pods/poky/build/conf")  
 		  {
