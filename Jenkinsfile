@@ -41,7 +41,7 @@ environment{
                                             name: 'UserPwd'),
                             ])
 			 inputUser = userInput.UserName?:''
-                         inputPwd = userInput.UserPwd?:'
+                         inputPwd = userInput.UserPwd?:''
 			 //echo "${userCred.UserName}"
 			echo "${inputUser}"
 			echo "${inputPwd}"
