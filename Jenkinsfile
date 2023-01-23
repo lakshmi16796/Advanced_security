@@ -2,6 +2,21 @@ pipeline {
   agent any
   stages 
 {  
+   stage("Using env vars")
+   {
+	environment{
+				
+		USER_NAME = "PODS"
+		USER_PWD = "pods"
+	}
+	   steps
+	   {
+		   echo "username and pwd are"
+		   echo "${env.USER_NAME}"
+		   echo "${env.USER_PWD}"
+	   }
+	   
+   } 
     stage ("User Input Stage")
     {
 	    
