@@ -42,7 +42,7 @@ environment{
                             ])
 			echo "${userCred.UserName}"
 			
-			if(userCred.UserName == env.UserName)
+			if(${userCred.UserName} == env.UserName)
 			{
 				echo "Matched"
 			}
