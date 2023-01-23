@@ -14,7 +14,7 @@ pipeline {
 		   echo "username and pwd are"
 		   echo "${env.USER_NAME}"
 		   echo "${env.USER_PWD}"
-		   env.getEnvironment().each { name, value -> println "Name: $name -> $value" }
+		   env.getEnvironment().each { name, value -> println "Name: $name -> Value $value" }
 	   }
 	   
    } 
