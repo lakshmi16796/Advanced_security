@@ -30,13 +30,13 @@ environment{
 			//echo "${env.MYVARNAME_USR}"
 			
 			def userCred = input(
-                            id: 'userCred', message: 'Enter path of test reports:?',
+                            id: 'userCred', message: 'Enter the Credentials',
                             parameters: [
 
-                                    string(defaultValue: 'None',
+                                    string(defaultValue: '',
                                             description: 'The User name',
                                             name: 'UserName'),
-                                    string(defaultValue: 'None',
+                                    string(defaultValue: '',
                                             description: 'Password',
                                             name: 'UserPwd'),
                             ])
