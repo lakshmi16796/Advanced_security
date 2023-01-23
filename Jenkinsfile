@@ -24,7 +24,7 @@ environment{
 		 echo "${env.USER_NAME}"
 		 echo "${env.USER_PWD}"
 		
-		 sh "printenv | sort"
+		 //sh "printenv | sort"
 		
 		 if(env.adv_choices == "Docker")
 		{
