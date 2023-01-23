@@ -42,7 +42,7 @@ environment{
 			
 			if( "${userCred}" == "${env.USER_NAME}")
 			{
-                		echo "Matched
+                		echo "Matched"
             		} else
 			{
               			  echo "Not matched"
