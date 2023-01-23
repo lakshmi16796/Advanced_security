@@ -40,8 +40,8 @@ environment{
                                             description: 'Password',
                                             name: 'UserPwd'),
                             ])
-			 inputUser = echo "${userCred.UserName}"
-                         inputPwd = echo "${userCred.UserPwd}"
+			 inputUser = ${userCred.UserName}
+                         inputPwd = ${userCred.UserPwd}
 			 //echo "${userCred.UserName}"
 			echo "${inputUser}"
 			echo "${inputPwd}"
