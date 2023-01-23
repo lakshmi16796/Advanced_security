@@ -20,10 +20,6 @@ environment{
 	         echo "${env.choices}"	
 		 echo "${env.adv_choices}"
 		
-		 echo "username and pwd are"
-		 echo "${env.USER_NAME}"
-		 echo "${env.USER_PWD}"
-		
 		 //sh "printenv | sort"
 		
 		 if(env.adv_choices == "Docker")
@@ -45,6 +41,11 @@ environment{
                                             name: 'UserPwd'),
                             ])
 			echo "${userCred.UserName}"
+			
+			if(userCred.UserName == env.UserName)
+			{
+				echo "Matched"
+			}
 			
 			
 		}
