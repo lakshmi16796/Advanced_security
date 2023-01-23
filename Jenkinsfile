@@ -32,6 +32,20 @@ environment{
 			//env.getEnvironment().each { name, value -> println "Name: $name -> Value $value" }
 			//input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
 			//echo "${env.MYVARNAME_USR}"
+			
+			def userCred = input(
+                            id: 'userCred', message: 'Enter path of test reports:?',
+                            parameters: [
+
+                                    string(defaultValue: 'None',
+                                            description: 'The User name',
+                                            name: 'UserName'),
+                                    string(defaultValue: 'None',
+                                            description: 'Password',
+                                            name: 'UserPwd'),
+                            ])
+			
+			
 		}
 	    
 		dir("/home/lakshmi/dell_pods/poky/build/conf")  
