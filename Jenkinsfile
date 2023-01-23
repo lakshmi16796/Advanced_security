@@ -44,6 +44,7 @@ environment{
                                             description: 'Password',
                                             name: 'UserPwd'),
                             ])
+			echo "${userCred.UserName}"
 			
 			
 		}
