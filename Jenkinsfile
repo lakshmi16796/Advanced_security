@@ -41,7 +41,7 @@ environment{
                                             name: 'UserPwd'),
                             ])
 			 inputUser = echo "${userCred.UserName}"
-                         inputPwd = echo "${userCred.Pwd}"
+                         inputPwd = echo "${userCred.UserPwd}"
 			 //echo "${userCred.UserName}"
 			echo "${inputUser}"
 			echo "${inputPwd}"
