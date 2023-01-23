@@ -1,27 +1,14 @@
 pipeline {
   agent any
+	
+environment{
+				
+	USER_NAME = "PODS"
+	USER_PWD = "pods"
+}
   stages 
 {  
-   stage("Using env vars")
-   {
-	environment{
-				
-		USER_NAME = "PODS"
-		USER_PWD = "pods"
-	}
-	   steps
-	   {
-		   echo "username and pwd are"
-		   echo "${env.USER_NAME}"
-		   echo "${env.USER_PWD}"
-		   
-		   script
-		   {
-		   	sh "printenv | sort"
-		   }
-	   }
-	   
-   } 
+   
     stage ("User Input Stage")
     {
 	    
@@ -32,6 +19,12 @@ pipeline {
                  echo "selected parameter is"		      
 	         echo "${env.choices}"	
 		 echo "${env.adv_choices}"
+		
+		 echo "username and pwd are"
+		 echo "${env.USER_NAME}"
+		 echo "${env.USER_PWD}"
+		
+		 sh "printenv | sort"
 		
 		 if(env.adv_choices == "Docker")
 		{
