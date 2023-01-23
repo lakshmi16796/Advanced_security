@@ -40,9 +40,13 @@ environment{
                                             description: 'Password',
                                             name: 'UserPwd'),
                             ])
-			echo "${userCred.UserName}"
+			 inputUser = userInput.UserName?:''
+                         inputPwd = userInput.UserPwd?:'
+			 //echo "${userCred.UserName}"
+			echo "${inputUser}"
+			echo "${inputPwd}"
 			
-			if(${userCred.UserName} == env.UserName)
+			if(inputUser == env.UserName)
 			{
 				echo "Matched"
 			}
