@@ -36,21 +36,18 @@ environment{
                                     string(defaultValue: '',
                                             description: 'The User name',
                                             name: 'UserName'),
-                                    string(defaultValue: '',
-                                            description: 'Password',
-                                            name: 'UserPwd'),
+                            
                             ])
-			 inputUser = $(echo"${userCred.UserName}")
-                         inputPwd = $(echo"${userCred.UserPwd}")
-			 //echo "${userCred.UserName}"
-			echo "${inputUser}"
-			echo "${inputPwd}"
+			 echo "User credential is: ${userCred}"
 			
-			if(inputUser == env.UserName)
+			if( "${userCred}" == "${env.USER_NAME}")
 			{
-				echo "Matched"
-			}
-			
+                		echo "Matched
+            		} else
+			{
+              			  echo "Not matched"
+           		}
+		
 			
 		}
 	    
