@@ -78,13 +78,7 @@ pipeline {
 			done
 			done
 			
-			cd /home/lakshmi/dell_pods/poky
-			pwd
-			source oe-init-build-env
-			pwd
-			#rm -rf bitbake.lock
-			#bitbake -c clean core-image-pods
-			bitbake core-image-pods
+			
 	
 	
 			cd /home/lakshmi/dell_pods/poky/build/conf
