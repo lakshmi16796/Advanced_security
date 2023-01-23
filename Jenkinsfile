@@ -14,6 +14,7 @@ pipeline {
 		   echo "username and pwd are"
 		   echo "${env.USER_NAME}"
 		   echo "${env.USER_PWD}"
+		   env.getEnvironment().each { name, value -> println "Name: $name -> $value" }
 	   }
 	   
    } 
@@ -31,7 +32,7 @@ pipeline {
 		 if(env.adv_choices == "Docker")
 		{
 			echo "Advanced feature selected"
-			env.getEnvironment().each { name, value -> println "Name: $name -> $value" }
+			
 			//input message: 'enter password', parameters: [password(defaultValue: 'value', description: '', name: 'hidden')]
 			//echo "${env.MYVARNAME_USR}"
 		}
