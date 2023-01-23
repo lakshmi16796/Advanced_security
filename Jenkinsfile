@@ -34,18 +34,19 @@ environment{
                             parameters: [
 
                                     string(defaultValue: '',
-                                            description: 'The User name',
-                                            name: 'UserName'),
+                                            description: 'The Build Password',
+                                            name: 'UserPwd'),
                             
                             ])
-			 echo "User credential is: ${userCred}"
+			echo "User credential is: ${userCred}"
 			
-			if( "${userCred}" == "${env.USER_NAME}")
+			if( "${userCred}" == "${env.USER_PWD}")
 			{
                 		echo "Matched"
-            		} else
+            		} 
+			else
 			{
-              			  echo "Not matched"
+              			 echo "Not matched"
 				 return 
            		}
 		
